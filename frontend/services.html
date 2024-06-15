@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #services {
+            padding: 50px;
+            text-align: center;
+        }
+
+        #services h2 {
+            font-size: 2em;
+            color: #000000;
+            margin-bottom: 20px;
+            background: rgba(211, 210, 210, 0.3);
+            margin-bottom: 2em;
+            border-radius: 10px;
+            padding: 1em;
+            width: 20%;
+            margin: auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .service {
+            margin-bottom: 40px;
+            text-align: center;
+            background: rgba(211, 210, 210, 0.3);
+            margin-bottom: 2em;
+            border-radius: 10px;
+            padding: 1em;
+            width: 50%;
+            margin: auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #services h3 {
+            font-size: 2em;
+            color: #000000;
+            margin-bottom: 20px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .service h3 {
+            font-size: 1.5em;
+            color: #060505;
+            margin-bottom: 10px;
+        }
+
+        .service h4 {
+            font-size: 1.2em;
+            color: #cf1e1e;
+            margin-bottom: 5px;
+        }
+
+        .service ul {
+            margin-left: 20px;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .service ul li {
+            margin-bottom: 5px;
+        }
+
+        #contact-form {
+            width: 50%;
+            background-color: rgba(211, 210, 210, 0.3);
+            padding: 20px;
+            margin-top: 50px;
+            border-radius: 10px;
+            margin-left: 25%;
+            padding: 1em;
+            width: 50%;
+            margin: auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #contact-form h2 {
+            font-size: 2em;
+            background-color: #e2dcdc88;
+            color: #090909;
+            margin-bottom: 20px;
+        }
+
+        form {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 500px;
+        }
+
+        form label {
+            display: block;
+            font-size: 1.1em;
+            color: #030000;
+            margin-bottom: 5px;
+
+        }
+
+        form input[type="text"] {
+            width: 100%;
+            height: 50%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #b0afaf;
+            border-radius: 5px;
+            background-color: #5350508b;
+        }
+
+        form textarea {
+            width: 95%;
+            height: 90px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #b0afaf;
+            border-radius: 5px;
+            background-color: #5750508b;
+        }
+
+        form input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #0056b3;
+            text-align: center;
+        }
+
+        body {
+            background-image: url('img/servises1.avif');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }       
+
+    </style>
+</head>
+
+<body>
+    <section id="services">
+        <h2>Our Services</h2>
+        <br>
+
+        <div class="service">
+            <h3>IT Strategy and Consulting</h3>
+            <p>Align your IT initiatives with your business objectives, ensuring a clear roadmap to success.</p>
+            <h4>Benefits</h4>
+            <ul>
+                <li>Strategic alignment with business goals</li>
+                <li>Enhanced operational efficiency</li>
+                <li>Optimized resource utilization</li>
+            </ul>
+            <h4>Key Features</h4>
+            <ul>
+                <li>Comprehensive IT assessment</li>
+                <li>Customized IT strategy development</li>
+                <li>Continuous performance monitoring</li>
+            </ul>
+        </div>
+        <br>
+        <div class="service">
+            <h3>Software Development</h3>
+            <p>End-to-end software development services, from planning and design to implementation and maintenance.</p>
+            <h4>Benefits</h4>
+            <ul>
+                <li>Customized solutions tailored to your needs</li>
+                <li>Scalable and flexible software architecture</li>
+                <li>Continuous support and maintenance</li>
+            </ul>
+            <h4>Key Features</h4>
+            <ul>
+                <li>Requirement analysis and planning</li>
+                <li>Agile development methodologies</li>
+                <li>Thorough testing and quality assurance</li>
+            </ul>
+        </div>
+        <br>
+
+        <!-- Add more service divs as needed -->
+
+        <!-- <div id="contact-form">
+            <h3>Services</h3>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <label for="text">Description:</label>
+                <textarea id="Description" name=""></textarea>
+                <label for="text">Benifits:</label>
+                <input type="text" id="email" name="">
+                <label for="text">Features:</label>
+                <input type="text" id="email" name=""><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div> -->
+    </section>
+    <div id="data-table">
+        <h3>Submitted Services</h3>
+        <table id="servicesTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Benefits</th>
+                    <th>Features</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Submitted data will be appended here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Fetch existing data and populate the table
+        fetch('http://127.0.0.1:8000/services/')
+            .then(response => response.json())
+            .then(data => {
+                const table = document.getElementById('servicesTable').getElementsByTagName('tbody')[0];
+                data.forEach(service => {
+                    const newRow = table.insertRow();
+    
+                    const cell1 = newRow.insertCell(0);
+                    const cell2 = newRow.insertCell(1);
+                    const cell3 = newRow.insertCell(2);
+                    const cell4 = newRow.insertCell(3);
+    
+                    cell1.textContent = service.name;
+                    cell2.textContent = service.description;
+                    cell3.textContent = service.benefits;
+                    cell4.textContent = service.features;
+                });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script>
+    
+</body>
+
+</html>

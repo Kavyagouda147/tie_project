@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+}
+
+label, input {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#login-message, #signup-message {
+    text-align: center;
+    margin-top: 20px;
+    color: red;
+}
+
+    </style>
+</head>
+<body>
+    <form id="login-form">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <p id="login-message"></p>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to handle user login
+            async function loginUser(event) {
+                event.preventDefault();
+
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                const loginMessage = document.getElementById('login-message');
+
+                const response = await fetch('http://localhost:8000/auth/token/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username, password })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    localStorage.setItem('access_token', data.access);
+                    loginMessage.textContent = 'Login successful!';
+                    loginMessage.style.color = 'green';
+                    // Redirect to a protected page or dashboard
+                } else {
+                    loginMessage.textContent = data.detail || 'Login failed!';
+                }
+            }
+
+            // Add event listeners to the forms
+            const loginForm = document.getElementById('login-form');
+
+            if (loginForm) {
+                loginForm.addEventListener('submit', loginUser);
+            } else {
+                console.error('Login form not found.');
+            }
+        });
+    </script>
+</body>
+</html>
